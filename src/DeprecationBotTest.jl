@@ -1,5 +1,7 @@
 module DeprecationBotTest
 
-# package code goes here
+function foobar{T}(x, y::T)
+    println(x, y)
+end
 
 end # module
