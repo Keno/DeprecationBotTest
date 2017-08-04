@@ -12,4 +12,18 @@ if !(isdefined(Core, :String) && isdefined(Core, :AbstractString))
     end
 end
 
+if VERSION >= v"0.1.0"
+    _foo(x) = foo(x)
+else
+    _foo(x) = foo(x)
+end
+
+bar(x) = _foo(x)
+
+function foobar{T}(a,
+               b::T,
+               c::T)
+    (a, b, c)    
+end
+
 end # module
